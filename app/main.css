@@ -55,14 +55,12 @@ body {
   border: 2px solid #0B101B;
   border-radius: 50%;
   pointer-events: none;
-  transition: transform 0.2s ease-out, width 0.1s ease-out, height 0.1s ease-out;
+  transition: transform 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out;
   z-index: 9999;
 }
 
 .cursor.hovered {
-  width: 20px;
-  height: 20px;
-  transition: transform 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out;
+  transition: transform 0.1s ease-out, width 0.2s ease-out, height 0.2s ease-out;
   
 }
 

@@ -85,7 +85,7 @@ const Home: React.FC = () => {
 
   const handleSearch = (query: string, marketplace?: string) => {
     setLoading(true);
-    fetch('http://localhost:5000/api/search', {
+    fetch('https://backend-bazaar.azurewebsites.net/api/search', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

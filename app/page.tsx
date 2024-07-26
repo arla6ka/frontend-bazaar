@@ -130,7 +130,7 @@ const Home: React.FC = () => {
           }}
         />
         {/* <FilterComponent currentFilter={filter} onFilterChange={setFilter} /> */}
-        <main className="flex flex-wrap justify-center gap-4 mt-10 sm:mt-8">
+        <main className="flex flex-wrap justify-center gap-4 mt-4 sm:mt-4">
           {loading ? (
             <LoadingAnimation />
           ) : Array.isArray(products) && products.length > 0 ? (

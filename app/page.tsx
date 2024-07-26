@@ -132,7 +132,7 @@ const Home: React.FC = () => {
       <div className="flex flex-col items-center w-full max-w-4xl mx-auto px-4 sm:px-2">
         
         <FlipWordsDemo/>
-        <p className="mt-2 md:mt-4 text-xl text-center text-[#0B101B] max-w-[300px] md:max-w-[1000px] leading-[25px] font-unbounded sm:text-lg sm:leading-[25px]">Добро пожаловать! Ваш ИИ помощник<br/>для поиска лучших товаров</p>
+        <p className="mt-2 md:mt-4 scale-[0.90] md:scale-[1]  text-xl md:text-xl text-center text-[#0B101B] w-[340px] md:w-[1000px] leading-[25px] font-unbounded sm:text-lg sm:leading-[25px]">Ваш ИИ помощник для поиска лучших товаров</p>
         <OrbitingCirclesDemo/>
         <PlaceholdersAndVanishInputDemo 
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}

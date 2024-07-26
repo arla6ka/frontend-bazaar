@@ -1,3 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap');
+
+body {
+  font-family: 'Onest', sans-serif;
+}
+
+.font-unbounded {
+  font-family: 'Unbounded', sans-serif;
+}
+
+.font-onest {
+  font-family: 'Onest', sans-serif;
+}
+
 .main {
     display: flex;
     flex-direction: column;

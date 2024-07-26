@@ -108,7 +108,7 @@ const Home: React.FC = () => {
         .catch((error) => {
           console.error('Error fetching products:', error);
           setLoading(false);
-          setTimeout(fetchData, 10000); // Попробовать снова через 10 секунд
+          setTimeout(fetchData, 120000); // Попробовать снова через 10 секунд
         });
     };
   

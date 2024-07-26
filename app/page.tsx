@@ -86,23 +86,35 @@ const Home: React.FC = () => {
 
   const handleSearch = (query: string, marketplace?: string) => {
     setLoading(true);
-    fetch('https://backend-bazaar-63c016fe5404.herokuapp.com/api/search', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ query, marketplace }),
-    })
-      .then((response) => response.json())
-      .then((data: ProductCardProps[]) => {
-        setProducts(data);
-        setLoading(false);
+  
+    const fetchData = () => {
+      fetch('https://backend-bazaar-63c016fe5404.herokuapp.com/api/search', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ query, marketplace }),
       })
-      .catch((error) => {
-        console.error('Error fetching products:', error);
-        setLoading(false);
-      });
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then((data: ProductCardProps[]) => {
+          setProducts(data);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.error('Error fetching products:', error);
+          setLoading(false);
+          setTimeout(fetchData, 10000); // Попробовать снова через 10 секунд
+        });
+    };
+  
+    fetchData(); // Изначальный запрос
   };
+  
 
   React.useEffect(() => {
     if (searchQuery) {

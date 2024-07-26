@@ -13,6 +13,7 @@ import ShimmerButton from "@/components/magicui/shimmer-button";
 import { FlipWordsDemo } from "./components/MainWords";
 import { OrbitingCirclesDemo } from "./components/Circles";
 import { PlaceholdersAndVanishInputDemo } from "./components/PlaceHolder";
+import { Analytics } from "@vercel/analytics/react";
 
 type ProductCardProps = {
   imageSrc: string;
@@ -34,9 +35,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ imageSrc, title, rating, pric
   <article className="flex flex-col justify-between pt-3 bg-white bg-opacity-100 rounded-md shadow h-[300px] w-[200px] sm:h-[350px] sm:w-[250px]">
     <div className="flex justify-between items-center px-2">
       <img src={marketplaceLogos[source] || ''} alt={source} className="w-6 h-6 rounded-full" />
-      <button className="text-gray-600 hover:text-gray-800">
+      {/* <button className="text-gray-600 hover:text-gray-800">
         <img src="https://img.icons8.com/?size=100&id=83213&format=png&color=000000" alt="Share" className="w-4 h-4" />
-      </button>
+      </button> */}
     </div>
     <img loading="lazy" src={imageSrc} alt={title} className="self-center max-w-full aspect-[1.59] w-[150px] h-[150px] object-contain mt-3 mb-2 sm:w-[200px] sm:h-[200px]" />
     <div className="flex flex-col px-2.5 pt-0.5 pb-2.5">
@@ -142,6 +143,7 @@ const Home: React.FC = () => {
         </main>
       </div>
       <CustomCursor />
+      <Analytics />
     </div>
   );
 }

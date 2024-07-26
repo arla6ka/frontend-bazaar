@@ -129,7 +129,7 @@ const Home: React.FC = () => {
             handleSearch(searchQuery, filter);
           }}
         />
-        <FilterComponent currentFilter={filter} onFilterChange={setFilter} />
+        {/* <FilterComponent currentFilter={filter} onFilterChange={setFilter} /> */}
         <main className="flex flex-wrap justify-center gap-4 mt-10 sm:mt-8">
           {loading ? (
             <LoadingAnimation />

@@ -132,7 +132,7 @@ const Home: React.FC = () => {
       <div className="flex flex-col items-center w-full max-w-4xl mx-auto px-4 sm:px-2">
         
         <FlipWordsDemo/>
-        <p className="mt-0 md:mt-4 scale-[0.9] md:scale-[1]  text-xl md:text-xl text-center text-[#0B101B] w-[340px] md:w-[1000px] leading-[25px] font-onest sm:text-lg sm:leading-[25px]">Ваш ИИ помощник для поиска лучших товаров</p>
+        <p className="mt-0 md:mt-4 scale-[0.9] md:scale-[1]  text-xl md:text-xl text-center text-[#0B101B] w-[340px] md:w-[1000px] leading-[25px] font-onest sm:text-lg sm:leading-[25px]">Ваш ИИ помощник для поиска лучших товаров за 3 минуты</p>
         <OrbitingCirclesDemo/>
         <PlaceholdersAndVanishInputDemo 
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
@@ -150,7 +150,7 @@ const Home: React.FC = () => {
               <ProductCard key={index} {...product} />
             ))
           ) : (
-            <p className="text-[#0B101B] font-unbounded mt-[-60px] md:mt-[-60px]">Ничего не найдено</p>
+            <p className="text-[#0B101B] font-unbounded mt-[-60px] md:mt-[-60px]"></p>
           )}
         </main>
       </div>

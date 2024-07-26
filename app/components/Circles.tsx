@@ -2,7 +2,7 @@ import OrbitingCircles from "@/components/magicui/orbiting-circles";
 
 export function OrbitingCirclesDemo() {
   return (
-    <div className="relative mb-[-100px] mt-[-70px] flex w-[500px] h-[500px] ml-2 mr-2 md:h-[500px] scale-[0.55] md:scale-[0.65] flex-col items-center justify-center overflow-hidden rounded-lg ">
+    <div className="relative mb-[-120px] md:mb-[-100px] mt-[-100px] md:mt-[-70px] flex w-[500px] h-[500px] ml-2 mr-2 md:h-[500px] scale-[0.45] md:scale-[0.65] flex-col items-center justify-center overflow-hidden rounded-lg ">
       <span className="font-unbounded pointer-events-none whitespace-pre-wrap text-black bg-clip-text text-center text-7xl font-semibold leading-none  dark:from-white dark:to-black">
         Bazaar
       </span>

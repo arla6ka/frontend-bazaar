@@ -85,7 +85,7 @@ const Home: React.FC = () => {
 
   const handleSearch = (query: string, marketplace?: string) => {
     setLoading(true);
-    fetch('https://backend-bazaar.azurewebsites.net/api/search', {
+    fetch('https://backend-bazaar-63c016fe5404.herokuapp.com/api/search', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
